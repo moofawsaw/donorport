@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    $post = \App\Models\Post::all();
+    return view('welcome',['posts'=>$post]);
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home-content', function (){
+    return  "contact Us";
+})->name('home-content');
