@@ -1,14 +1,974 @@
-@extends('layouts.homeLayout')
-
-@section('content')
-
-
-
-
-
-
-
-
+<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sun Jun 13 2021 05:59:08 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="608dfbd9297f8d98aab29148" data-wf-site="59de7f3f07bb6700016482bc" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Donorport | Home</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="css/boonbay.webflow.css" rel="stylesheet" type="text/css">
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+    <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer="" type="text/javascript" src="https://cdn.statically.io/gh/malchata/yall.js/main/dist/yall.min.js"></script>
+    <style>
+        body {
+            --avatar: #fff;
+            --bg-transparent: hsl(0deg 0% 100% / 75%);
+            --bkg-activity: #fff;
+            --bkg-alt: #fafafa;
+            --bkg-attention: #fffbdf;
+            --bkg-checkout: #fafafa;
+            --bkg-color: #fff;
+            --bkg-dark: #e6e7e8;
+            --bkg-disabled: #ffffff;
+            --bkg-icon: #fafafa;
+            --bkg-ios-dark: #efefef;
+            --bkg-ios: #efefef;
+            --bkg-item: #fbfdff;
+            --bkg-item-mid: #fbfdff;
+            --bkg--list: #393e50;
+            --bkg-opacity: #fafafa70;
+            --bkg-overlay: rgb(255 255 255 / 75%);
+            --bkg-post: #fff;
+            --bkg-qty: rgba(111, 111, 144, 0.85);
+            --bkg-select: #fafafa;
+            --bkg-shade: #f8fafd;
+            --bkg-snap: #fafafa;
+            --bkg-studio: #f8fafd;
+            --bkg-unset: #fafafa;
+            --bkg-unsetimg: #e5f4ff;
+            --border-activate: #d6d6d6;
+            --border-studio: #ededed;
+            --border-unset: #fafafa;
+            --border: #f5f5f5;
+            --bright-soft: brightness(1);
+            --btn-light: #4aabf0;
+            --btn-blue: #3898ec;
+            --color-primary-light: #152640;
+            --color-primary: #fff;
+            --color-secondary: #eec413;
+            --content-editable: rgba(217, 245, 255,0.5);
+            --feed-icon: #eef2f8;
+            --opacity-alt: 1;
+            --opacity-img: brightness(1) contrast(1);
+            --opacity: 1;
+            --placeholder: #00000021;
+            --price: #45bb82;
+            --shadow-avatar: #bbb;
+            --shadow-swal: rgb(60 64 67 / 8%) 6px 8px 20px 1px;
+            --studio: #f8fafd;
+            --tab-active: #4aabf0;
+            --text-off: #6f6f90;
+            --text-soft: #6f6f908c;
+            --text-subtext: #6f6f90ad;
+            --text-title: #68688a;
+            --text-toggle: #6f6f904f;
+            --text-toggle_active: #6f6f90;
+            --tooltip: #544b4b;
+            --xp-tag: #4eb1f7;
+        }
+        body.dark-theme {
+            --avatar: #2d3848;
+            --bg-transparent: hsl(216deg 23% 23% / 75%);
+            --bkg-activity: #2d3848;
+            --bkg-alt: #404a5f;
+            --bkg-attention: #ab3f3f;
+            --bkg-checkout: #404a5fb8;
+            --bkg-color: #2d3848;
+            --bkg-dark: #495a73;
+            --bkg-disabled: #2d3848;
+            --bkg-icon: #2d3848;
+            --bkg-ios-dark: #2d3848;
+            --bkg-ios: #404a5f;
+            --bkg-item: #393e50;
+            --bkg-item-mid: #3c4356;
+            --bkg--list: #393e50;
+            --bkg-opacity: #40485fcc;
+            --bkg-overlay: rgb(45 45 45 / 75%);
+            --bkg-post: #40495f;
+            --bkg-qty: #6f788c;
+            --bkg-select: #40495f;
+            --bkg-shade: #40495f;
+            --bkg-snap: #2d3848;
+            --bkg-studio: #2d3848;
+            --bkg-unset: unset;
+            --bkg-unsetimg: unset;
+            --border-activate: #fafafa7a;
+            --border-studio: #ffffff00;
+            --border-unset: #ffffff00;
+            --border: #fafafa0f;
+            --bright-soft: brightness(.94);
+            --btn-light: #8b94a7;
+            --btn-blue: #40495f;
+            --color-primary-light: #152640;
+            --color-primary: #2d3848;
+            --color-secondary: #e684af;
+            --content-editable: #40495f;
+            --feed-icon: #2d3848;
+            --opacity-alt: .95;
+            --opacity-img: brightness(0.85) contrast(1.2);
+            --opacity: 0.5;
+            --placeholder: #96aabb;
+            --price: #48e096;
+            --shadow-avatar: #40495f;
+            --shadow-swal: rgb(0 0 0 / 8%) 6px 8px 20px 1px;
+            --studio: #2d3848;
+            --tab-active: #fcfcfce8;
+            --text-off: #7d8e9bff;
+            --text-soft: #868ea2;
+            --text-subtext: #868ea2;
+            --text-title: #fff;
+            --text-toggle: #e1e3e45e;
+            --text-toggle_active: #e1e3e4;
+            --tooltip: #2b3442;
+            --xp-tag: #ffffff00;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                --avatar: #2d3848;
+                --bg-transparent: hsl(216deg 23% 23% / 75%);
+                --bkg-activity: #2d3848;
+                --bkg-alt: #404a5f;
+                --bkg-attention: #ab3f3f;
+                --bkg-checkout: #404a5fb8;
+                --bkg-color: #2d3848;
+                --bkg-dark: #495a73;
+                --bkg-disabled: #2d3848;
+                --bkg-icon: #2d3848;
+                --bkg-ios-dark: #2d3848;
+                --bkg-ios: #404a5f;
+                --bkg-item: #393e50;
+                --bkg-item-mid: #3c4356;
+                --bkg-overlay: rgb(45 45 45 / 75%);
+                --bkg-post: #40495f;
+                --bkg-qty: #6f788c;
+                --bkg-select: #40495f;
+                --bkg-shade: #40495f;
+                --bkg-snap: #2d3848;
+                --bkg-studio: #2d3848;
+                --bkg-unset: unset;
+                --bkg-unsetimg: unset;
+                --border-activate: #fafafa7a;
+                --border-studio: #ffffff00;
+                --border-unset: #ffffff00;
+                --border: #fafafa0f;
+                --bright-soft: brightness(.94);
+                --btn-light: #8b94a7;
+                --btn-blue: #40495f;
+                --bkg-opacity: #40485fcc;
+                --color-primary-light: #152640;
+                --color-primary: #2d3848;
+                --color-secondary: #e684af;
+                --content-editable: #40495f;
+                --feed-icon: #2d3848;
+                --opacity-alt: .95;
+                --opacity-img: brightness(0.85) contrast(1.2);
+                --opacity: 0.5;
+                --placeholder: #96aabb;
+                --price: #48e096;
+                --shadow-avatar: #40495f;
+                --shadow-swal: rgb(60 64 67 / 8%) 6px 8px 20px 1px;
+                --studio: #2d3848;
+                --tab-active: #fcfcfce8;
+                --text-off: #7d8e9bff;
+                --text-soft: #868ea2;
+                --text-subtext: #868ea2;
+                --text-title: #fff;
+                --text-toggle: #e1e3e45e;
+                --text-toggle_active: #e1e3e4;
+                --tooltip: #2b3442;
+                --xp-tag: #ffffff00;
+            }
+            body.light-theme {
+                --avatar: #fff;
+                --bg-transparent: hsl(0deg 0% 100% / 75%);
+                --bkg-activity: #fff;
+                --bkg-alt: #fafafa;
+                --bkg-attention: #fffbdf;
+                --bkg-checkout: #fafafa;
+                --bkg-color: #fff;
+                --bkg-dark: #e6e7e8;
+                --bkg-disabled: #ffffff;
+                --bkg-icon: #fafafa;
+                --bkg-ios-dark: #efefef;
+                --bkg-ios: #efefef;
+                --bkg-item: #fbfdff;
+                --bkg-item-mid: #fbfdff;
+                --bkg-opacity: #fafafa70;
+                --bkg-overlay: rgb(255 255 255 / 75%);
+                --bkg-post: #fff;
+                --bkg-qty: rgba(111, 111, 144, 0.85);
+                --bkg-select: #fafafa;
+                --bkg-shade: #f8fafd;
+                --bkg-snap: #fafafa;
+                --bkg-studio: #f8fafd;
+                --bkg-unset: #fafafa;
+                --bkg-unsetimg: #e5f4ff;
+                --border-activate: #d6d6d6;
+                --border-studio: #ededed;
+                --border-unset: #fafafa;
+                --border: #f5f5f5;
+                --bright-soft: brightness(1);
+                --btn-light: #4aabf0;
+                --btn-blue: #3898ec;
+                --color-primary-light: #152640;
+                --color-primary: #fff;
+                --color-secondary: #eec413;
+                --content-editable: rgba(217, 245, 255,0.5);
+                --feed-icon: #eef2f8;
+                --opacity-alt: .8;
+                --opacity-img: brightness(1) contrast(1);
+                --opacity: 1;
+                --placeholder: #00000021;
+                --price: #45bb82;
+                --shadow-avatar: #bbb;
+                --shadow-swal: rgb(0 0 0 / 8%) 6px 8px 20px 1px;
+                --studio: #f8fafd;
+                --tab-active: #4aabf0;
+                --text-off: #6f6f90;
+                --text-soft: #6f6f908c;
+                --text-subtext: #6f6f90ad;
+                --text-title: #6b6b8c;
+                --text-toggle: #6f6f904f;
+                --text-toggle_active: #6f6f90;
+                --tooltip: #544b4b;
+                --xp-tag: #4eb1f7;
+            }
+        }
+        .feed__stamp,
+        .url {
+            color: var(--text-soft)
+        }
+        .icon--feed,
+        .feed__avatar--heart,
+        .feed__box,
+        .feed__tag--new {
+            background: var(--feed-icon) !important
+        }
+        .btn--loadmore {
+            background: var(--btn-blue)
+        }
+        .billing__item--tax,
+        .billing__item--listing {
+            background: var(--bkg-item)
+        }
+        .ladder__ul li.active {
+            background: var(--bkg-select)
+        }
+        .swal2-popup  {
+            box-shadow: var(--shadow-swal)
+        }
+        .checkout__disabled,
+        .swal2-actions,
+        .swal2-container.swal2-backdrop-show,
+        .swal2-container.swal2-noanimation,
+        .swal2-container.swal2-backdrop-hide,
+        .swal2-hide,
+        .mfp-bg {
+            background: var(--bg-transparent) !important
+        }
+        .tag.tag--xp {
+            border: 2px solid var(--xp-tag)
+        }
+        .price,
+        .billing__total:not(.billing__total--credit){
+            color: var(--price) !important
+        }
+        .btn,
+        .uploader__img,
+        .upload__remove {
+            filter: var(--bright-soft);
+        }
+        .ladder__dropdown .ladder__ul li,
+        .studio__label {
+            color: var(--text-off)
+        }
+        [contenteditable="true"]:hover {
+            background-color: var(--content-editable);
+        }
+        /*Set important for read/un-read states in dark mode*/
+        .avatar__img--logo_reccuring,
+        .avatar__img--recurring {
+            background: var(--bkg-color) !important;
+        }
+        .activity__item {
+            background: var(--bkg-activity);
+        }
+        .activity__item--read {
+            background: var(--bkg-shade) !important;
+        }
+        .sub__qty {
+            color: var(--bkg-qty);
+            background: var(--bkg-unset);
+        }
+        .resize__icon {
+            background: var(--bkg-alt);
+        }
+        .resize__icon.active {
+            background: var(--btn-light);
+        }
+        [data-view="snap"] .listing__item,
+        [data-view="snap"] .listing__img {
+            background: var(--bkg-snap);
+        }
+        .key__wrapper li.tag {
+            opacity: var(--opacity-alt)
+        }
+        img,
+        .post__header,
+        .post__footer,
+        .gallery__thumb a > .gallery__img,
+        .post__icon {
+            filter: var(--opacity-img);
+        }
+        .post__sold {
+            background-color: var(--bkg-opacity);
+        }
+        .post__mid:not(.post__mid--large) > div {
+            /*background: var(--bkg-avatar);*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+        }
+        .counter,
+        .progress__slider,
+        .sort__label input:checked ~ .sort__text {
+            background: var(--bkg-dark) !important;
+        }
+        .upload__img--newbig,
+        .upload__imgbox--new {
+            background: var(--bkg-unsetimg) !important;
+        }
+        /*Removing border from Studio select boxes */
+        .studio__input,
+        .video__html input,
+        .key__wrapper li input,
+        .selected--category,
+        .selected--subcategory,
+        .studio__radios label {
+            border: 2px solid var(--border-unset) !important;
+        }
+        /*iOS Toggle */
+        .ios__track,
+        .ios__toggle {
+            background: var(--bkg-ios);
+        }
+        .ios__track--alt,
+        .ios__track--header,
+        .ios__toggle--header {
+            background: var(--bkg-ios-dark);
+        }
+        /*Box Shadows*/
+        #account,
+        .header__thumb {
+            box-shadow: 1px 1px 3px 0 var(--shadow-avatar);
+        }
+        /*  disabled button for admin invite*/
+        .btn--invite[disabled],
+        .post__sold--subitem {
+            opacity: 0.6;
+            background: var(--bkg-disabled);
+        }
+        /*  dark (dark) to yellow warning (light) for note::*/
+        .note--attention {
+            background: var(--bkg-attention);
+        }
+        /* white (dark) to shade (dark) */
+        .view__toggle.active {
+            color: var(--text-toggle_active);
+        }
+        .view__toggle {
+            color: var(--text-toggle);
+        }
+        /* dark (dark) #fafafa (light) -> category svg bg */
+        .id__html--category,
+        .filter__toggle.checked {
+            background: var(--bkg-icon)
+        }
+        /* dark (dark) to white (light) for donor avatart*/
+        .donors__item {
+            border: 3px solid var(--avatar)
+        }
+        /* shade (dark) to #fff (light) -> post items, etc. **not set** */
+        .post__main,
+        .post__details,
+        .post__category,
+        .bulk:not(.bulk--organization) {
+            background: var(--bkg-post);
+        }
+        .checkout__thumb {
+            background: var(--bkg-checkout);
+        }
+        /*Placeholders:*/
+        ::-webkit-input-placeholder {
+            color: var(--placeholder)
+        }
+        ::-moz-placeholder {
+            color: var(--placeholder)
+        }
+        :-ms-input-placeholder {
+            color: var(--placeholder)
+        }
+        :-moz-placeholder {
+            color: var(--placeholder)
+        }
+        a[data-tooltip]:before {
+            border-top-color: var(--tooltip) !important;
+            background: var(--tooltip) !important
+        }
+        .donation__overlay,
+        .lg-backdrop {
+            background: var(--bkg-overlay) !important
+        }
+        body,
+        .activity__controls,
+        .activity__controls,
+        .activity__controls,
+        .avatar__box--user,
+        .bank__dialogue,
+        .btn--removetag,
+        .cart__controls,
+        .cart__list li,
+        .cart__remove,
+        .disabled,
+        .donation__dialogue,
+        .donorport__icon,
+        .empty__block,
+        .empty__icon--admin,
+        .filter,
+        .filter__slider,
+        .grab__header,
+        .grab__input,
+        .grab__item,
+        .icon--cancelled,
+        .input__span,
+        .ladder__ul.active,
+        .lg-group,
+        .lg-icon,
+        .linked__item,
+        .login__modal,
+        .menu__title,
+        .modal__block,
+        .modal__item,
+        .options--feed:after,
+        .options label:hover,
+        .options__item,
+        .studio__section,
+        .swal2-show,
+        .tab__menu--main,
+        .upload__imgbox,
+        .watch__item,
+        .wish__item,
+        .wish__remove,
+        .wish__wrapper {
+            background-color: var(--bkg-color);
+        }
+        .about__banner,
+        .about__tag,
+        .about__title,
+        .accounts__icon,
+        .account__footer,
+        .activate--settings,
+        .activity,
+        .admin__delete,
+        .avatar__block:not(.avatar__block--milestone),
+        .avatar--grab,
+        .avatar__img:not(.avatar__img--log):not(.avatar__img--comment):not(.avatar__img--user),
+        .badge__current,
+        .bar:not(.bar--page),
+        .billing__item--listing:hover,
+        .billing__item--recurring,
+        .billing__payment,
+        .bulk__input,
+        .bulk__input--alt,
+        .cart__img,
+        .cart__list,
+        .checkout__block--bg,
+        .checkout__undo,
+        .container--bg,
+        .deactivate,
+        .details__error,
+        .donation__footer,
+        .donorport,
+        .donors__item,
+        .draft__avatar,
+        .empty--uploads,
+        .empty__circle,
+        .feed__block,
+        .feed__bulk,
+        .feed__event,
+        .feed__image,
+        .feed__item,
+        .feed__menu.open,
+        .filter__wrap,
+        .footer,
+        .from-me:after,
+        .from-them:after,
+        .gallery__thumb a,
+        .grab__checkout,
+        .grab__header,
+        .grab__radio,
+        .header__tab,
+        .help__icon,
+        .icon--bank,
+        .icon--billing,
+        .icon--listing,
+        .id:not(.id--location),
+        .lazy,
+        .linked__avatar,
+        .linked__empty,
+        .linked__item,
+        .listing__badge,
+        .listing__commentblock,
+        .listing__img,
+        .listing__left.active,
+        .listing__type,
+        .listing__type,
+        .login,
+        .login__message,
+        .log__bottom,
+        .log__item--verified,
+        .media__box,
+        .modal,
+        .modal:after,
+        .modal__footer,
+        .modal__header,
+        .modal__subheader,
+        .note:not(.note--attention),
+        .options label:hover,
+        .order__footer,
+        .order__icon,
+        .order__thumb,
+        .organization__link,
+        .page__section--followup,
+        .password-strength-visualization-bar-scale,
+        .post__badge,
+        .post__top,
+        .post__video,
+        .progress__slider--listing,
+        .qtytag,
+        .search__label li.tag,
+        .selected--category,
+        .selected--subcategory,
+        .settings__theme > label,
+        .studio__radios label,
+        .suggested,
+        .sweet__logo,
+        .tab__btn.w--current,
+        .tag--rank,
+        .uploader__fileerror,
+        .uploader__filename,
+        .upload__html,
+        .upload__html--new,
+        .upload__imgbox--sub,
+        .watch__thumb,
+        .wish__list,
+        .wish__thumb,
+        .you__item {
+            background-color: var(--bkg-shade);
+        }
+        .lg-toogle-thumb,
+        .lg-inner,
+        .lg-next,
+        .lg-prev,
+        .lg-thumb-item,
+        .lg-thumb-outer,
+        .lg-toolbar,
+        .irs-line,
+        .swal2-actions {
+            background: var(--bkg-shade) !important;
+        }
+        h1, h2, h3, h4:not(.lg-sub-html h4), h5, h6,
+        .about__thumb,
+        .about__title,
+        .accounts__email,
+        .activate__input,
+        .activity__name,
+        .admin__name,
+        .billing__card,
+        .billing__name,
+        .billing__title,
+        .btn--random,
+        .select--share,
+        .bulk,
+        .card__input,
+        .card__label,
+        .cart__name,
+        .category__item label,
+        .checkout__label,
+        .checkout__title,
+        .checkout__undo,
+        .deactivate,
+        .feed__description,
+        .feed__head,
+        .feed__search input,
+        .feed__stat,
+        .feed__tag--new,
+        .feed__title,
+        .filter__toggle.checked,
+        .footer__logo,
+        .footer__title,
+        .icon--info,
+        .id:not(.id--location),
+        .input textarea,
+        .input__label input,
+        .input__label textarea,
+        .ladder__selected,
+        .ladder__ul li.active,
+        .linked__details,
+        .login__subheader,
+        .logo__heading,
+        .log__bottom,
+        .log__title,
+        .modal__subheader,
+        .note,
+        .options__item,
+        .order__footer,
+        .order__headline,
+        .page__blurb,
+        .post__category,
+        .post__count,
+        .post__count--checkout,
+        .post__details,
+        .post__title,
+        .post__top,
+        .post__video,
+        .post__videolink,
+        .price--fee,
+        .pure-material-checkbox,
+        .rank__tab--grand,
+        .rank__tab--ladder,
+        .rank__value,
+        .saved__bank,
+        .saved__cvc,
+        .saved__exp,
+        .settings__header,
+        .settings__theme > label,
+        .sku__wrap,
+        .studio__input,
+        .studio__review,
+        .studio__tabbtn,
+        .sub__qty,
+        .subheader__name,
+        .swal2-popup .swal2-title,
+        .sweet__input,
+        .sweet__title,
+        .tab__btn.w--current,
+        .team__info,
+        .title--header,
+        .title--small,
+        .title:not(.title--header),
+        .update__tabbtn.w--current,
+        .uploader__fileerror,
+        .upload__filename,
+        .visibility__label,
+        .visibility__label > a,
+        .watch__left,
+        .wish__name,
+        .you__item {
+            color: var(--text-title) !important;
+        }
+        .post__svg > svg > path {
+            fill: var(--text-title);
+        }
+        .about__tag,
+        .activity__sub,
+        .admin__date,
+        .admin__email,
+        .avatar__img--recent,
+        .bank__legend,
+        .billing__action,
+        .billing__address,
+        .billing__date,
+        .billing__info,
+        .billing__monthly,
+        .billing__small,
+        .billing__type,
+        .card__save,
+        .checkout__details,
+        .checkout__info,
+        .checkout__secure,
+        .date__name,
+        .donation__dialogue,
+        .donation__radio label,
+        .donation__review,
+        .feed__avatar--likedplus,
+        .feed__because,
+        .feed__count,
+        .feed__reason,
+        .feed__noresults,
+        .feed__tag,
+        .filter__toggle,
+        .grab__item,
+        .grab__radio,
+        #lg-counter,
+        .lg-toolbar .lg-icon,
+        .link:not(.link--feed),
+        .linked__empty,
+        .listing__label,
+        .list__item,
+        .mark,
+        .order__coffee,
+        .order__coffee a,
+        .order__id,
+        .order__subdate,
+        .page__date,
+        .page__label--sub,
+        .page__paragraph,
+        .post__order,
+        .post__tab--large,
+        .search__label--key * li,
+        .sort__text,
+        .sponsor__item,
+        .studio__characters,
+        .studio__subtitle,
+        .swal2-html-container,
+        .sweet__block,
+        .sweet__text,
+        .tab__btn,
+        .team__role,
+        .terms__subsection,
+        .time,
+        .tooltip,
+        .upload__fileinfo,
+        .update__tabbtn,
+        .watch__button--read,
+        .watch__checkbox {
+            color: var(--text-subtext) !important;
+        }
+        input:not(.activate__input, .studio__input),
+        textarea,
+        [data-view="snap"] .listing__item,
+        #selected--option.active,
+        .about__banner,
+        .account__footer,
+        .activity__controls,
+        .activity__item,
+        .bar,
+        .badge__content,
+        .badge__item,
+        .billing__item--tax,
+        .billing__item--listing,
+        .billing__item--log,
+        .billing__sort,
+        .billing__wrap--table,
+        .bulk--organization,
+        .cart__controls,
+        .cart__list li,
+        .category__item,
+        .checkout__block--grandtotal,
+        .checkout__header--items,
+        .checkout__item,
+        .checkout__pay,
+        .create__header,
+        .content--alt,
+        .donation__radio > div,
+        .donation__radio label,
+        .feed__all,
+        .feed__item,
+        .feed__sticky,
+        .feed__tag--new,
+        .filter,
+        .filter__slider,
+        .footer,
+        .footer__bottom,
+        .fulfill,
+        .grab__item,
+        .grab__radio,
+        .grand,
+        .input__block,
+        .ladder__item,
+        .ladder__select,
+        .lg-thumb-item,
+        .lg-thumb-outer,
+        .lg-toolbar,
+        .listing__bottom,
+        .listing__header,
+        .listing__media,
+        .listing__mediaerror,
+        .listing__select,
+        .listing__stats,
+        .listing__status,
+        .listing__subheader,
+        .locations,
+        .log__recent,
+        .media__box,
+        .menu__title,
+        .modal__footer,
+        .modal__header,
+        .modal__item,
+        .options label,
+        .order__footer,
+        .order__title,
+        .page,
+        .post__details,
+        .post__top,
+        .receipt__list--user,
+        .saved__seperator,
+        .scroll,
+        .studio__header,
+        .studio__section,
+        .studio__tabs,
+        .studio__title,
+        .sub__item--wish,
+        .suggested,
+        .watch__item,
+        .wish__item,
+        .wish__remove,
+        .xp__tag {
+            border-color: var(--border) !important;
+        }
+        .activate__input {
+            border-color: var(--border-activate) !important;
+        }
+        @media screen and (max-width: 991px) {
+            .billing__item:not(.billing__item--recurring){
+                border-bottom: 1px solid var(--border) !important;
+            }
+        }
+        @media screen and (max-width: 479px) {
+            .listing__left:not(.active):hover {
+                background: unset !important
+            }
+            .tab__menu.tab__menu--main,
+            .bar__buttons,
+            .swal2-actions {
+                background: var(--bkg-color) !important;
+            }
+            .admin__left
+            .listing__grand,
+            .tab__btn.active,
+            .post__mid--large {
+                background: var(--bkg-shade) !important;
+            }
+            .tab__btn.active,
+            #selected--option.active {
+                color: var(--text-title) !important;
+            }
+            .order__wrap {
+                border-bottom: 1px solid var(--border) !important;
+            }
+        }
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        [data-select="none"] {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        html {
+            overflow: hidden;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+        }
+        div,
+        button,
+        textarea,
+        input,
+        select,
+        a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+        }
+        input {
+            background: rgba(255, 0, 0, 0);
+            border: none;
+        }
+        img,
+        svg
+            /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Firefox */
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        [data-animate='ripple'] {
+            position: relative;
+            overflow: hidden;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        [data-animate='ripple']:hover {
+            opacity: 0.85;
+        }
+        [data-animate='ripple'] .rippling {
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.4;
+            pointer-events: none;
+            -webkit-transform: translate3d(-50%, -50%, 0) translateY(1px);
+            transform: translate3d(-50%, -50%, 0) translateY(1px);
+        }
+    </style>
+    <link rel="alternate" hreflang="en" href="https://www.donorport.com">
+    <link rel="alternate" hreflang="zh" href="https://zh.donorport.com">
+    <meta name="theme-color" content="#6d6bb5">
+    <meta name="msapplication-TileColor" content="#6d6bb5">
+    <meta name="msapplication-navbutton-color" content="#6d6bb5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6d6bb5">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.min.js" integrity="sha256-/56Y/jYu6730zlN8iulnNWn2IcVa4wK/ogwk7n9p2JY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.1.0/autoNumeric.min.js"></script>
+    <style>
+        .post__list .post__item {
+            width: calc(100% / 4);
+        }
+        .post__list[max-width~="1250px"] .post__item {
+            width: calc(100% / 3);
+        }
+        @media only screen and (max-width: 1250px) {
+            .post__list .post__item {
+                width: calc(100% / 3);
+            }
+        }
+        .post__list[max-width~="950px"] .post__item {
+            width: calc(100% / 2);
+        }
+        @media only screen and (max-width: 950px) {
+            .post__list .post__item {
+                width: calc(100% / 2);
+            }
+        }
+        .post__list[max-width~="550px"] .post__item {
+            width: 100%;
+        }
+        @media only screen and (max-width: 550px) {
+            .post__list .post__item {
+                width: 100%;
+            }
+        }
+        .underline {
+            color: orange !important;
+            text-decoration: underline !important;
+        }
+    </style>
+</head>
+<body>
 <div class="css-bank">
     <div class="css-cat-buttons w-embed">
         <style>
@@ -642,9 +1602,7 @@
                         <div class="wish__list--empty">
                             <div class="empty__block empty__block--main">
                                 <div class="empty__icon">
-                                    <div class="empty__circle empty__circle--xsmall">
-
-                                        <img src="{{asset('images/text-lines.svg')}}" alt=""></div>
+                                    <div class="empty__circle empty__circle--xsmall"><img src="images/text-lines.svg" alt=""></div>
                                 </div>
                                 <h6>Your Wishlist is empty.</h6>
                             </div>
@@ -851,7 +1809,7 @@
                             <li data-notify="feed" class="activity__item">
                                 <div class="activity__left">
                                     <div class="avatar">
-                                        <div class="avatar__block avatar__block--activity"><img src="{{asset('images/camera.svg')}}" alt=""></div>
+                                        <div class="avatar__block avatar__block--activity"><img src="images/camera.svg" alt=""></div>
                                     </div>
                                     <div class="activity__info">
                                         <a href="#" class="activity__name w-inline-block">
@@ -875,7 +1833,7 @@
                             <li data-notify="feed" class="activity__item">
                                 <div class="activity__left">
                                     <div class="avatar">
-                                        <div class="avatar__block avatar__block--activity"><img src="{{asset('images/download.svg')}}" alt=""></div>
+                                        <div class="avatar__block avatar__block--activity"><img src="images/download.svg" alt=""></div>
                                     </div>
                                     <div class="activity__info">
                                         <a href="#" class="activity__name w-inline-block">
@@ -902,7 +1860,7 @@
                             <li data-notify="feed" class="activity__item">
                                 <div class="activity__left">
                                     <div class="avatar">
-                                        <div class="avatar__block avatar__block--activity"><img src="{{asset('images/camera.svg')}}" alt=""></div>
+                                        <div class="avatar__block avatar__block--activity"><img src="images/camera.svg" alt=""></div>
                                     </div>
                                     <div class="activity__info">
                                         <a href="#" class="activity__name w-inline-block">
@@ -926,7 +1884,7 @@
                             <li data-notify="feed" class="activity__item">
                                 <div class="activity__left">
                                     <div class="avatar">
-                                        <div class="avatar__block avatar__block--activity"><img src="{{asset('images/download.svg')}}" alt=""></div>
+                                        <div class="avatar__block avatar__block--activity"><img src="images/download.svg" alt=""></div>
                                     </div>
                                     <div class="activity__info">
                                         <a href="#" class="activity__name w-inline-block">
@@ -1026,7 +1984,7 @@
                     <div class="empty empty--feed">
                         <div class="empty__block empty__block--main">
                             <div class="empty__icon">
-                                <div class="empty__circle empty__circle--xsmall"><img src="{{asset('images/mute.svg')}}" alt=""></div>
+                                <div class="empty__circle empty__circle--xsmall"><img src="images/mute.svg" alt=""></div>
                             </div>
                             <h6>You&#x27;re all caught up!</h6>
                         </div>
@@ -1080,7 +2038,7 @@
                     <div class="empty empty--notify">
                         <div class="empty__block empty__block--main">
                             <div class="empty__icon">
-                                <div class="empty__circle empty__circle--xsmall"><img src="{{asset('images/interface.svg')}}" alt=""></div>
+                                <div class="empty__circle empty__circle--xsmall"><img src="images/interface.svg" alt=""></div>
                             </div>
                             <h6>You&#x27;re not following anything.</h6>
                         </div>
@@ -2122,7 +3080,7 @@ display: none;
                     <ul data-scroll="vertical" role="list" class="cart__list w-list-unstyled"></ul>
                     <div data-empty="cart" class="empty__block">
                         <div class="empty__icon">
-                            <div class="empty__circle empty__circle--xsmall"><img src="{{asset('images/bag.svg')}}" alt=""></div>
+                            <div class="empty__circle empty__circle--xsmall"><img src="images/bag.svg" alt=""></div>
                         </div>
                         <h6>No items in cart.</h6>
                     </div>
@@ -2720,7 +3678,7 @@ display: none;
                         </div>
                     </div>
                     <div class="grab__error">
-                        <div class="empty__circle empty__circle--xsmall"><img src="{{asset('images/trash.svg')}}" alt="">
+                        <div class="empty__circle empty__circle--xsmall"><img src="images/trash.svg" alt="">
                             <div class="header">
                                 <div class="header__wrap">
                                     <div class="css-bank">
@@ -3832,7 +4790,7 @@ display: none;
             <div class="empty__modal">
                 <div id="noSlider" class="empty__block hidden">
                     <div class="empty__container">
-                        <div class="empty__circle empty--small"><img src="{{asset('images/tag.svg')}}" alt=""></div>
+                        <div class="empty__circle empty--small"><img src="images/tag.svg" alt=""></div>
                         <div class="empty__message">
                             <div class="title title--small w-embed"><text class="item__title project__title">There are no results in this range</text></div>
                             <div class="empty__text">
@@ -3843,7 +4801,7 @@ display: none;
                 </div>
                 <div id="noFilter" class="empty__block hidden">
                     <div class="empty__container">
-                        <div class="empty__circle empty--small"><img src="{{asset('images/023-setting.svg')}}" alt=""></div>
+                        <div class="empty__circle empty--small"><img src="images/023-setting.svg" alt=""></div>
                         <div class="empty__message">
                             <div class="title title--small w-embed"><text class="item__title project__title">There are no results with these filters</text></div>
                             <div class="empty__text">
@@ -3854,7 +4812,7 @@ display: none;
                 </div>
                 <div id="noButton" class="empty__block hidden">
                     <div class="empty__container">
-                        <div class="empty__circle empty--small"><img src="{{asset('images/blend.svg')}}" alt=""></div>
+                        <div class="empty__circle empty--small"><img src="images/blend.svg" alt=""></div>
                         <div class="empty__message">
                             <div class="title title--small w-embed"><text class="item__title project__title">No matches in this category</text></div>
                             <div class="empty__text">
@@ -3865,7 +4823,7 @@ display: none;
                 </div>
                 <div id="noData" class="empty__block hidden">
                     <div class="empty__container">
-                        <div class="empty__circle empty--small"><img src="{{asset('images/qr-code.svg')}}" alt=""></div>
+                        <div class="empty__circle empty--small"><img src="images/qr-code.svg" alt=""></div>
                         <div class="empty__message">
                             <div class="title title--small w-embed"><text class="item__title project__title">There are no results matching your search</text></div>
                             <div class="empty__text">
@@ -4202,7 +5160,7 @@ display: none;
     </div>
 </div>
 <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=59de7f3f07bb6700016482bc" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="{{asset('js/webflow.js')}}" type="text/javascript"></script>
+<script src="js/webflow.js" type="text/javascript"></script>
 <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 <script defer="" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 <script type="text/javascript" src="https://cdn.statically.io/gh/marcj/css-element-queries/master/src/ResizeSensor.js"></script>
@@ -4756,6 +5714,4 @@ $(".rad").each(function () {
     }
 </script>
 </body>
-
-
-@endsection
+</html>
