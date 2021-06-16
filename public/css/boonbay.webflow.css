@@ -17570,7 +17570,6 @@ label {
   position: -webkit-sticky;
   position: sticky;
   bottom: 3.3rem;
-  display: none;
   padding: 14px;
   background-color: rgba(0, 0, 0, 0.86);
   color: #fff;
